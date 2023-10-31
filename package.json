@@ -23,12 +23,12 @@
   },
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
-    "build": "yarn && tsc && yarn prisma:deploy",
+    "build": "npm && tsc && npm run prisma:deploy",
     "start": "node ./dist/index.js",
-    "postinstall": "prisma generete",
-    "prisma:deploy": "prisma migrate deploy"
+    "postinstall": "npm run prisma generete",
+    "prisma:deploy": "npm run prisma migrate deploy"
   },
   "engines": {
-    "node": "18"
+    "node": "20"
   }
 }
