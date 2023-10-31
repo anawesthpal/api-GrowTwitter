@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { CadastroUsuario, Login } from "../middlewares";
 import { UsuarioController } from "../controllers";
+import { CadastroUsuario, Login } from "../middlewares";
 
 
 export function usuariosRoutes() {
@@ -14,5 +14,3 @@ export function usuariosRoutes() {
 
     return router
 }
-
-//maleato de dexclorferinamina 2mg

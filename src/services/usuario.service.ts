@@ -1,8 +1,8 @@
 import { Usuario as UsuarioPrisma } from "@prisma/client";
-import repository from "../database/prisma.connection";
-import { CadastrarUsuarioDTO, ResponseDTO, LoginDTO } from "../dtos";
-import { Usuario } from "../models";
 import { randomUUID } from "crypto";
+import repository from "../database/prisma.connection";
+import { CadastrarUsuarioDTO, LoginDTO, ResponseDTO } from "../dtos";
+import { Usuario } from "../models";
 
 export class UsuarioService {
     public async cadastrar (dados: CadastrarUsuarioDTO): Promise<ResponseDTO>{
