@@ -81,7 +81,8 @@ export class UsuarioService {
             usuario.nome,
             usuario.email,
             usuario.username,
-            usuario.senha
+            usuario.senha,
+            usuario.imgUrl || undefined
         )
     }
 }
