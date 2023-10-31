@@ -10,7 +10,8 @@
     "@prisma/client": "^5.4.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "prisma-client-lib": "^1.34.12"
   },
   "devDependencies": {
     "@types/cors": "^2.8.15",
@@ -21,7 +22,7 @@
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.2.2"
   },
-  "scripts": {
+"scripts": {
     "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
     "build": "npm && tsc && npm run prisma:deploy",
     "start": "node ./dist/index.js",
