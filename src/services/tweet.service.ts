@@ -1,6 +1,6 @@
 import { Tweet as TweetPrisma } from "@prisma/client";
 import repository from "../database/prisma.connection";
-import { CriarTweetDTO, ResponseDTO } from "../dtos";
+import { CriarTweetDTO, ResponseDTO, TipoTweetDTO } from "../dtos";
 import { Tweet } from "../models";
 
 export class TweetService {
@@ -36,11 +36,11 @@ export class TweetService {
     }
 
     private mapToModel(tweet: TweetPrisma): Tweet {
-        return new Tweet (
-            tweet.id, 
+        return new Tweet(
+            tweet.id,
             tweet.conteudo,
-            tweet.tipo,
-            tweet.idUsuario            
+            tweet.tipo as TipoTweetDTO,
+            tweet.idUsuario,
         )
     }
 }

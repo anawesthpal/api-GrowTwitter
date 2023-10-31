@@ -24,10 +24,10 @@
   },
 "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
-    "build": "npm && tsc && npm run prisma:deploy",
+    "build": "npm install && tsc && npm run prisma:deploy",
     "start": "node ./dist/index.js",
-    "postinstall": "npm run prisma generete",
-    "prisma:deploy": "npm run prisma migrate deploy"
+    "postinstall": "npx prisma generate",
+    "prisma:deploy": "npx prisma migrate deploy"
   },
   "engines": {
     "node": "20"
