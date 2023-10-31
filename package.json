@@ -23,9 +23,9 @@
     "typescript": "^5.2.2"
   },
 "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
     "build": "npm install && tsc && npm run prisma:deploy",
-    "start": "node ./dist/index.js",
+    "start": "node ./dist/server.js",
     "postinstall": "npx prisma generate",
     "prisma:deploy": "npx prisma migrate deploy"
   },
