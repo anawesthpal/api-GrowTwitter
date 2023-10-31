@@ -23,7 +23,8 @@ export class UsuarioService {
                 nome: dados.nome,
                 email: dados.email,
                 username: dados.username,
-                senha: dados.senha
+                senha: dados.senha,
+                imgUrl: dados.imgUrl,
             }
         })
         
@@ -69,7 +70,7 @@ export class UsuarioService {
       code: 200,
       ok: true,
       mensagem: "Login efetuado",
-      dados: { token },
+      dados: { token, user: this.mapToModel(usuarioEncontrado) },
     };
   }
 

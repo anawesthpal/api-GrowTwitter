@@ -14,6 +14,7 @@ model Usuario {
     username String @db.VarChar(15) @unique
     senha String @db.VarChar(100) 
     authToken String? @db.Text @map("auth_token")
+    imgUrl String? @db.Text @map("img_url")
 
     criadoEm DateTime @default(now()) @map("criado_em")
     atualizadoEm DateTime @updatedAt @map("atualizado_em")

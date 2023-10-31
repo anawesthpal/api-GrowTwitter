@@ -3,4 +3,5 @@ export interface CadastrarUsuarioDTO {
     email: string
     senha: string
     username: string
+    imgUrl?: string
 }

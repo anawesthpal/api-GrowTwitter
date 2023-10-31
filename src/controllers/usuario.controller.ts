@@ -3,7 +3,7 @@ import { UsuarioService } from '../services';
 
 export class UsuarioController {
     public async criar (req: Request, res: Response) {
-        const { nome, email, username, senha } = req.body
+        const { nome, email, username, senha, imgUrl } = req.body
          
         try {
             const service = new UsuarioService()
@@ -11,7 +11,8 @@ export class UsuarioController {
                 nome: nome,
                 email: email,
                 username: username,
-                senha: senha
+                senha: senha,
+                imgUrl: imgUrl
             })
             
             return res.status(response.code).json(response)
