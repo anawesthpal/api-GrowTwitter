@@ -1,9 +1,9 @@
 import cors from 'cors';
 import 'dotenv/config';
 import express from 'express';
-import { usuariosRoutes } from './routes/usuarios.routes';
-import { tweetsRoutes } from './routes/tweets.routes';
 import { likesRoutes } from './routes/likes.routes';
+import { tweetsRoutes } from './routes/tweets.routes';
+import { usuariosRoutes } from './routes/usuarios.routes';
 
 const app = express();
 

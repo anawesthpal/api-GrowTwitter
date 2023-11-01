@@ -4,4 +4,3 @@ export interface ResponseDTO {
 	mensagem: string;
 	dados?: any;
 }
-

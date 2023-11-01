@@ -1,6 +1,6 @@
 import { Router } from "express"
-import { Auth, CriarTweet } from "../middlewares"
 import { TweetController } from "../controllers"
+import { Auth, CriarTweet } from "../middlewares"
 
 export function tweetsRoutes() {
     const router = Router()
@@ -8,7 +8,9 @@ export function tweetsRoutes() {
     const criarTweet = new CriarTweet()
     const controller = new TweetController()
 
-    router.post('/', [auth.validar, criarTweet.validar], controller.criar) //criar tweets
+    router.post('/', [auth.validar, criarTweet.validar], controller.criar) 
+    
+    router.get('/', [auth.validar], controller.criar)
     
     return router
 }

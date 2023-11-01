@@ -9,8 +9,8 @@ export function usuariosRoutes() {
     const controller = new UsuarioController()
     const login = new Login()
 
-    router.post('/', [cadastrarUsuario.validar], controller.criar) //criar usuários
-    router.post('/login', [login.validar], controller.login) // login de usuários
+    router.post('/', [cadastrarUsuario.validar], controller.criar)
+    router.post('/login', [login.validar], controller.login)
 
     return router
 }
